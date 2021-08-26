@@ -22,8 +22,4 @@ for paciente in range(len(lista)):
     plt.xticks([])
     plt.yticks([])
 
-x = lista.iloc[:1].values
-
-print(x)
-
 plt.show()
