@@ -55,6 +55,7 @@ print(diagnostico)
 from ipywidgets import interactive
 from IPython.display import SVG, display
 from graphviz import Source
+from sklearn.tree import export_graphviz
 
 colunas = dataset.columns  # nome das colunas
 classes = ["B", "M"]
