@@ -12,10 +12,10 @@ x_treino, x_teste, y_treino, y_teste = train_test_split(
     x, y, test_size=0.25, random_state=0
 )
 
-florestaRandomica = RandomForestClassifier(n_estimators=500)
+florestaRandomica = RandomForestClassifier(n_estimators=10)
 
 florestaRandomica.fit(x_treino, y_treino)
 
-resultados = florestaRandomica.predict(x_teste)
+resultado = florestaRandomica.predict(x_teste)
 
-print("Acurácia:", metrics.accuracy_score(y_teste, resultados))
+print("Acurácia:", metrics.accuracy_score(y_teste, resultado))

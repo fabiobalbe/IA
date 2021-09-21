@@ -1,6 +1,5 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
 from sklearn import metrics
 from sklearn.naive_bayes import GaussianNB
 
@@ -16,6 +15,6 @@ gauss = GaussianNB()
 
 gauss.fit(x_treino, y_treino)
 
-resultados_gauss = gauss.predict(x_teste)
+resultado_gauss = gauss.predict(x_teste)
 
-print("Acurácia: ", metrics.accuracy_score(y_teste, resultados_gauss))
+print("Acurácia: ", metrics.accuracy_score(y_teste, resultado_gauss))
