@@ -4,8 +4,10 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn import metrics
 
 dataset = pd.read_excel("dataset-covid_einstein-TRATADO.xlsx")
+colunas = dataset.columns.tolist()
+colunasTratadas = colunas[2:3] + colunas[4:]
 
-x = dataset.iloc[:, 4:].values  # TEM QUE ADD COLUNA DA IDADE PARA FICAR MAIS COMPLETO
+x = dataset[colunasTratadas]
 y = dataset.iloc[:, 3].values
 
 x_treino, x_teste, y_treino, y_teste = train_test_split(
